@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import { withTranslation } from '../i18n'
+import { withTranslation, Trans  } from '../i18n'
 
 const Home = ({t}) => (
   <div className="container">

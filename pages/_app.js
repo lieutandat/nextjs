@@ -1,7 +1,7 @@
 
 import React from 'react'
 import App from 'next/app'
-import { appWithTranslation } from '../i18n.js'
+import { appWithTranslation,  } from '../i18n.js'
 
 class MyApp extends App {
   render() {

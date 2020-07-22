@@ -1,7 +1,11 @@
 {
   "name": "nextjs",
   "version": "0.1.0",
+  "main": "./dist/index.js",
   "private": true,
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
