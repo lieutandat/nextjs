@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import PropTypes from 'prop-types'
+import { withTranslation } from '../i18n'
 
-const Home = () => (
+const Home = ({t}) => (
   <div className="container">
     <Head>
       <title>Create Next App</title>
@@ -9,7 +11,7 @@ const Home = () => (
 
     <main>
       <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
+       {t('welcome')} <a href="https://nextjs.org">Next.js!</a>
       </h1>
 
       <p className="description">
@@ -200,4 +202,12 @@ const Home = () => (
   </div>
 )
 
-export default Home
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+Home.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('common')(Home)

@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "node server.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^9.3.3",
+    "next-i18next": "^4.5.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
-  }
+  },
+  "sideEffects": [
+    "./i18n.js"
+  ]
 }
